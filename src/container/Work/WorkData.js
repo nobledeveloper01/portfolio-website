@@ -14,7 +14,7 @@ const works = [
       codeLink: "https://github.com/nobledeveloper01/plixa",
       projectLink:
          "https://plixa.xyz/",
-      imageUrl: images.uber,
+      imageUrl: images.Uber,
       
    },
    {
