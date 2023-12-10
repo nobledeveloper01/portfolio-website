@@ -48,9 +48,13 @@ import medium from "../assets/medium.png";
 import topmate from "../assets/topmate.jpeg";
 import bracket from "../assets/Bracket.gif";
 import viber from "../assets/viber.gif";
+import Eventtrakka from "../assets/eventtrakka.jpg";
+import cloud from "../assets/cloud.jpg"
 export default {
    bracket,
+   cloud,
    viber,
+   Eventtrakka,
    topmate,
    github,
    twitter,

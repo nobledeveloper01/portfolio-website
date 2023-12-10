@@ -7,71 +7,73 @@ import { images } from "../../constants";
 import works from "./WorkData";
 
 function Work() {
-   return (
-      <>
-         <h2 className="head-text">
-            My Creative Portfolio
-         </h2>
+  return (
+    <>
+      <h2 className="head-text">My Creative Portfolio</h2>
 
-         <motion.div
-            transition={{ duration: 0.5, delayChildren: 0.5 }}
-            className="app__work-portfolio"
-         >
-            {works.map((work, index) => (
-               <div className="app__work-item app-flex" key={index}>
-                  <div className="app__work-img app-flex">
-                     <img src={work.imageUrl} alt="work"></img>
-                     <motion.div
-                        className="app__work-hover app-flex"
-                        whileHover={{ opacity: [1, 1] }}
-                        transition={{
-                           duration: 0.25,
-                           ease: " easeInOut",
-                           staggerChildren: 0.5,
-                        }}
-                     >
-                        <a
-                           href={work.projectLink}
-                           target="blank"
-                           rel="noreferrer"
-                        >
-                           <motion.div
-                              whileInView={{ scale: [0, 1] }}
-                              whileHover={{ scale: [1, 0.4] }}
-                              transition={{ duration: 0.25 }}
-                              className="app__flex"
-                           >
-                              <AiFillEye />
-                           </motion.div>
-                        </a>
-                        <a href={work.codeLink} target="blank" rel="noreferrer">
-                           <motion.div
-                              whileInView={{ scale: [0, 1] }}
-                              whileHover={{ scale: [1, 0.4] }}
-                              transition={{ duration: 0.25 }}
-                              className="app__flex"
-                           >
-                              <AiFillGithub />
-                           </motion.div>
-                        </a>
-                     </motion.div>
-                  </div>
-                  <div className="app__work-content app__flex">
-                     <h4 className="bold-text">{work.title}</h4>
-                     <p className="p-text" style={{ marginTop: 10 }}>
-                        {work.description}
-                     </p>
-                     
-                  </div>
-               </div>
-            ))}
-         </motion.div>
-      </>
-   );
+      <motion.div
+        transition={{ duration: 0.5, delayChildren: 0.5 }}
+        className="app__work-portfolio"
+      >
+        {works.map((work, index) => (
+          <div className="app__work-item app-flex" key={index}>
+            <div className="app__work-img app-flex">
+              <img src={work.imageUrl} alt="work"></img>
+              <motion.div
+                className="app__work-hover app-flex"
+                whileHover={{ opacity: [1, 1] }}
+                transition={{
+                  duration: 0.25,
+                  ease: " easeInOut",
+                  staggerChildren: 0.5,
+                }}
+              >
+                <a href={work.projectLink} target="blank" rel="noreferrer">
+                  <motion.div
+                    whileInView={{ scale: [0, 1] }}
+                    whileHover={{ scale: [1, 0.4] }}
+                    transition={{ duration: 0.25 }}
+                    className="app__flex"
+                  >
+                    <AiFillEye />
+                  </motion.div>
+                </a>
+                <a href={work.codeLink} target="blank" rel="noreferrer">
+                  <motion.div
+                    whileInView={{ scale: [0, 1] }}
+                    whileHover={{ scale: [1, 0.4] }}
+                    transition={{ duration: 0.25 }}
+                    className="app__flex"
+                  >
+                    <AiFillGithub />
+                  </motion.div>
+                </a>
+              </motion.div>
+            </div>
+            <div className="app__work-content app__flex">
+              <h4 className="bold-text">{work.title}</h4>
+              <p className="p-text" style={{ marginTop: 10 }}>
+                {work.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </motion.div>
+
+      <button
+        onClick={() =>
+          window.open("https://github.com/nobledeveloper01", "_blank")
+        }
+        className="app_button-more"
+      >
+        Check my Github for more projects
+      </button>
+    </>
+  );
 }
 
 export default AppWrap(
-   MotionWrap(Work, "app__works"),
-   "work",
-   "work__primarybg"
+  MotionWrap(Work, "app__works"),
+  "work",
+  "work__primarybg"
 );

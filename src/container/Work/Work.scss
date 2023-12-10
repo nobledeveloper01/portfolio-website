@@ -38,6 +38,37 @@
       color: #ffffff;
    }
 }
+.app_button-more {
+   display: inline-block;
+   padding: 12px 24px;
+   color: white;
+   font-size: 16px;
+   font-weight: bold;
+   text-align: center;
+   text-decoration: none;
+   border: 2px solid #ff4500; /* Change this color to your preferred button border color */
+   border-radius: 6px;
+   background-color: #1d0294; /* Change this color to your preferred button background color */
+   color: white; /* Text color */
+   cursor: pointer;
+   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+ 
+   &:hover {
+     background-color: #ff6a36; /* Change this color to the hover state color */
+     border-color: #ff6a36; /* Change this color to the hover state border color */
+   }
+ 
+   &:focus {
+     outline: none;
+     /* Add additional styles for focus state if needed */
+   }
+ 
+   &:active {
+     transform: translateY(1px);
+     /* Add additional styles for active state if needed */
+   }
+ }
+ 
 
 .app__work-portfolio {
    display: flex;
